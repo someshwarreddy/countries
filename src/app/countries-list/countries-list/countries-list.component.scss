@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+// with grid
+@media (min-width: 320px) {
+
+
+    .country-list {
+        font-family: 'Open Sans', sans-serif;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2rem;
+    }
+
+    //  with flex 
+
+    // .country-list {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     flex-direction: row;
+    //     gap: 3rem;
+    //     justify-content: center;
+    // }
+
+    //  image height restication creats rendering problem
+
+    .country-image {
+        // height: 135px;
+        // position: relative;
+        // white-space: nowrap;
+    }
+
+    .country-list .card {
+        // flex: 0 0 auto; // when ever we use flex it is usefull
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 3px 3px rgba(160, 153, 153, 0.12), 0 1px 2px rgba(171, 165, 165, 0.24);
+        // border: 1px solid rgba(0, 0, 0, 0.24);
+        white-space: nowrap;
+        // position: relative;
+        margin-bottom: 2rem;
+        // text-transform: capitalize;
+        background-color: #fff;
+        color: rgb(31, 29, 29);
+        font: 1.2em sans-serif, serif;
+        font-family: 'Times New Roman', Times, serif;
+        text-rendering: optimizeLegibility;
+
+    }
+
+    //  responsive image 
+    .country-image img {
+        // max-width: 100%;
+        // width: calc(100vw);
+        // max-height: 100%;
+        // position: absolute;
+    }
+
+    .country-content {
+        display: grid;
+        word-break: break-all;
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+    .country-name,
+    .capital {
+        text-overflow: clip;
+        overflow: hidden;
+        width: 200px;
+        white-space: nowrap;
+    }
+
+    // search input design
+
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 2rem 0;
+    }
+
+    .search-form {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .search-form-content {
+        display: flex;
+        align-items: center;
+        min-width: 20rem;
+        max-width: 500px;
+        width: 100%;
+        position: relative;
+    }
+
+    .search-icon {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        color: rgb(161, 158, 158);
+    }
+
+    #site-search {
+        border: none;
+        border-radius: 5px;
+        padding: 10px 10px 10px 40px;
+        margin: 0;
+        width: 100%;
+        background: none;
+        box-shadow: 0 -0.1em 0.1em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+            0.1em 0.1em 0.5em rgba(0, 0, 0, 0.3);
+    }
+
+    #site-search:focus {
+        background: none;
+        outline: unset;
+        border: 0;
+        box-shadow: 0 -0.1em 0.1em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+            0.1em 0.1em .5em rgba(0, 0, 0, 0.3);
+    }
+
+    .serach-dropdown {
+        position: relative;
+
+    }
+
+    .dropdown,
+    .dropdown-content {
+        min-width: 120px;
+        max-width: 150px;
+        width: 100%;
+        padding: .5rem;
+        border-radius: 5px;
+        box-shadow: 0 -0.1em 0.2em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+            0.1px 0.1em .4em rgba(0, 0, 0, 0.3);
+        background: #fff;
+        height: auto;
+        transition: height 2s ease-in-out;
+        color: rgba(0, 0, 0, 1) !important;
+    }
+
+    .dropdown {
+        margin-bottom: 0.3rem;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .no-result {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: calc(77vh - 2px);
+    }
+
+    .more-details {
+        text-decoration: none;
+        color: rgb(13, 46, 230);
+        text-rendering: optimizeLegibility;
+        // text-shadow: 1px 1px 2px rgb(81, 82, 88), 0 0 .5em rgb(108, 108, 116), 0 0 0.2em rgb(111, 111, 119);
+        text-emphasis-color: #008000;
+        text-emphasis-style: "*";
+        // text-decoration: #008000 wavy underline;
+        // text-indent: 5em;
+        font: 1em Georgia, serif;
+    }
+}
+.dropdown {
+    margin-top: 1rem;
+}
+.search-form-content {
+    min-width: 17rem
+}
+.population,
+.capital,
+.region,
+.timezone,
+.googlemap {
+    font-size: medium;
+    text-transform: capitalize;
+    color:#586167;
+}

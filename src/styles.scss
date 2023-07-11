@@ -1,1 +1,113 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+
+
 /* You can add global styles to this file, and also import other style files */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  // width: 150px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 0 15px;
+}
+
+.lightmode {
+  background: rgb(255, 255, 255);
+  color: rgb(52, 51, 51);
+
+}
+.darkmode {
+  background: rgb(49, 47, 47);
+  color: rgb(255, 255, 255);
+}
+
+.icon-toggle {
+  cursor: pointer;
+}

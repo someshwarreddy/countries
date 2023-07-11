@@ -1,0 +1,55 @@
+<div class="container top-zindex">
+  <div class="search-bar">
+    <form class="search-form">
+      <div class="search-form-content">
+        <span class="search-icon"> <mat-icon>search</mat-icon> &nbsp;</span>
+        <label for="site-search"></label>
+        <input type="search" [(ngModel)]="searchTerm" id="site-search" name="serchvalue" placeholder="search countries">
+      </div>
+    </form>
+
+    <div class="serach-dropdown">
+      <div class="dropdown" (click)="dropdownToggle()">
+        filter by region
+      </div>
+      <div class="dropdown-content" *ngIf="dropDownisopen">
+        <div *ngFor="let region of regionArray">
+          <span (click)="selectRegion(region)">{{region}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-continer *ngIf="countries | async | searchCountries:searchTerm as result">
+    <div class="country-list">
+      <div class="card" *ngFor="let country of result">
+        <div class="country-image">
+          <img src={{country.flags.svg}} alt="country.name.official">
+        </div>
+        <div class="country-content">
+          <p class="country-name">
+            <b>{{country.name.common}}</b>
+          </p>
+          <p class="population">
+            population: {{country.population}}
+          </p>
+          <p class="region">
+            region:{{country.region}}
+          </p>
+          <p class="capital">
+            capital:{{country.capital}}
+          </p>
+          <a [routerLink]="['/countrydetails', country.capital | json]" class="more-details">moredetails</a>
+          <em></em>
+        </div>
+
+      </div>
+
+      <div *ngIf="result.length === 0 && searchTerm?.length > 0 " class="no-result">
+        <mat-icon>mood_bad</mat-icon>
+        <h1>!Oops Sorry we couldn't find a match for "{{searchTerm}}"</h1>
+      </div>
+    </div>
+  </ng-continer>
+
+</div>

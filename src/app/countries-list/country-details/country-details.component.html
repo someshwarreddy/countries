@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="country-detail">
+        <div class="card" *ngIf="country">
+            <div class="country-image">
+                <img src={{country[0].flags.svg}} alt="country.name.official">
+            </div>
+            <div class="country-content">
+                <p class="country-name">
+                    <b>{{country[0].name.official}}</b>
+                </p>
+                <p class="population">
+                    population: {{country[0].population}}
+                </p>
+                <p class="region">
+                    region:{{country[0].region}}
+                </p>
+                <p class="capital">
+                    capital:{{country[0].capital}}
+                </p>
+                <p class="timezone">time zone:{{country[0].timezones}}</p>
+                <a class="googlemap" href="{{country[0].maps.googleMaps}}">googlemap</a>
+                
+            </div>
+        </div>
+    </div>
