@@ -1,22 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-@media (min-width: 325px) {
-    .card {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-    }
 
-    .card div {
-        flex: 1 1 50%;
-    }
-
-    .country-content {
-        padding: 0 0 0 1rem;
-        font-family: 'Open Sans', sans-serif;
-    }
-}
 
 .country-name {
     font-weight: 600;
@@ -44,4 +28,22 @@
 
 .country-name {
     font-size: medium;
+}
+
+@media (min-width: 320px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+    .card div {
+        flex: 1 1 50%;
+    }
+
+    .country-content {
+        padding: 0 0 0 1rem;
+        font-family: 'Open Sans', sans-serif;
+    }
 }
