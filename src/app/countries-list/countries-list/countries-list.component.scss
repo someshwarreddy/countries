@@ -156,17 +156,18 @@
         height: calc(77vh - 2px);
     }
 
-    .more-details {
-        text-decoration: none;
-        color: rgb(13, 46, 230);
-        text-rendering: optimizeLegibility;
-        // text-shadow: 1px 1px 2px rgb(81, 82, 88), 0 0 .5em rgb(108, 108, 116), 0 0 0.2em rgb(111, 111, 119);
-        text-emphasis-color: #008000;
-        text-emphasis-style: "*";
-        // text-decoration: #008000 wavy underline;
-        // text-indent: 5em;
-        font: 1em;
-    }
+
+}
+.more-details {
+    text-decoration: none;
+    color: #0c87d9;
+    text-rendering: optimizeLegibility;
+    // text-shadow: 1px 1px 2px rgb(81, 82, 88), 0 0 .5em rgb(108, 108, 116), 0 0 0.2em rgb(111, 111, 119);
+    text-emphasis-color: #008000;
+    text-emphasis-style: "*";
+    // text-decoration: #008000 wavy underline;
+    // text-indent: 5em;
+    font: 1em;
 }
 .dropdown {
     margin-top: 1rem;
