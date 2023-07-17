@@ -16,8 +16,7 @@
 }
 
 .card div {
-    // flex: 1 1 100%;
-    display: block;
+    // display: block;
     padding: 0;
 }
 
@@ -38,7 +37,8 @@
     }
 
     .card div {
-        flex: 1 1 50%;
+        flex: 1;
+        padding-left: 1rem;
     }
 
     .country-name {
