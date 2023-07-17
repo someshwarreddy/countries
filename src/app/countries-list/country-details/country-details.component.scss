@@ -16,11 +16,14 @@
 }
 
 .card div {
-    flex: 1 1 100%;
+    // flex: 1 1 100%;
+    display: block;
+    padding: 0;
 }
 
 .country-name {
     font-size: medium;
+    font-weight: 600;
 }
 .country-content {
     padding: 0 0 0 1rem;
