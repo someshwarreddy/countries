@@ -2,8 +2,6 @@
 
 // with grid
 @media (min-width: 320px) {
-
-
     .country-list {
         font-family: 'Open Sans', sans-serif;
         display: grid;
@@ -41,8 +39,6 @@
         // text-transform: capitalize;
         background-color: #fff;
         color: rgb(31, 29, 29);
-        font: 1.2em sans-serif, serif;
-        font-family: 'Times New Roman', Times, serif;
         text-rendering: optimizeLegibility;
 
     }
@@ -169,7 +165,7 @@
         text-emphasis-style: "*";
         // text-decoration: #008000 wavy underline;
         // text-indent: 5em;
-        font: 1em Georgia, serif;
+        font: 1em;
     }
 }
 .dropdown {
@@ -186,4 +182,9 @@
     font-size: medium;
     text-transform: capitalize;
     color:#586167;
+}
+
+.country-name {
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
 }
