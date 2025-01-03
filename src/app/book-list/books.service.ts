@@ -20,7 +20,7 @@ export class GoogleBooksService {
   }
   getCountries(): Observable<Array<Country>> {
     return this.http.get<Country[]>('https://restcountries.com/v3.1/all')
-      .pipe(map((countries) => countries || []));
+      .pipe(retry(3),map((countries) => countries || []));
   }
   getCountry(name: string): Observable<Array<Country>> {
     const Querytext = name.replace(/[^\w\s\d]+/gi, '').toLowerCase().trim();

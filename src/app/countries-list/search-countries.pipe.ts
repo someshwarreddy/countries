@@ -5,7 +5,7 @@ import { CountriesListComponent } from './countries-list/countries-list.componen
   name: 'searchCountries'
 })
 export class SearchCountriesPipe implements PipeTransform {
-  @ViewChild('CountriesListComponent') CountriesList: CountriesListComponent;
+  // @ViewChild('CountriesListComponent') CountriesList: CountriesListComponent;
   filterdvalue: Country[];
   // @ViewChild('noSearchresults', { read: CountriesListComponent, static: true })
   // private CountriesListComponent: CountriesListComponent;

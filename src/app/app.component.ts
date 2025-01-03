@@ -2,8 +2,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { DOCUMENT } from '@angular/common';
 import { Store } from '@ngrx/store';
-import { selectBookCollection, selectBooks } from './state/books.selectors';
-import { BooksActions, BooksApiActions } from './state/books.actions';
+// import { selectBookCollection, selectBooks } from './state/books.selectors';
+// import { BooksActions, BooksApiActions } from './state/books.actions';
 import { CountriessApiActions } from './state/countries.actions';
 import { GoogleBooksService } from './book-list/books.service';
 import { Book } from './book-list/books.model';
@@ -18,24 +18,24 @@ import { selectCountries } from './state/countries.selector';
 })
 export class AppComponent {
   books$: Observable<readonly Book[]> | null;
-  bookCollection$ = this.store.select(selectBookCollection);
+  // bookCollection$ = this.store.select(selectBookCollection);
   countries: Observable<Country[]> | null;
 
   iconText: string = "dark_mode";
   iconToggle: boolean;
 
   onAdd(bookId: string) {
-    this.store.dispatch(BooksActions.addBook({ bookId }));
+    // this.store.dispatch(BooksActions.addBook({ bookId }));
   }
 
   onRemove(bookId: string) {
-    this.store.dispatch(BooksActions.removeBook({ bookId }));
+    // this.store.dispatch(BooksActions.removeBook({ bookId }));
   }
 
   constructor(@Inject(DOCUMENT) private document: Document, private booksService: GoogleBooksService,
     private store: Store) {
-    this.books$ = this.store.select(selectBooks);
-    this.countries = this.store.select(selectCountries)
+    // this.books$ = this.store.select(selectBooks);
+    // this.countries = this.store.select(selectCountries)
   }
 
   toggleTheme() {
@@ -44,10 +44,10 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.booksService
-      .getBooks()
-      .subscribe((books) =>
-        this.store.dispatch(BooksApiActions.retrievedBookList({ books }))
-      );
+    // this.booksService
+    //   .getBooks()
+    //   .subscribe((books) =>
+    //     this.store.dispatch(BooksApiActions.retrievedBookList({ books }))
+    //   );
   }
 }

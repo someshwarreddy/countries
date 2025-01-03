@@ -2,7 +2,7 @@ import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/cor
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { GoogleBooksService } from 'src/app/book-list/books.service';
-import { BooksApiActions } from 'src/app/state/books.actions';
+// import { BooksApiActions } from 'src/app/state/books.actions';
 import { CountriessApiActions } from 'src/app/state/countries.actions';
 import { selectCountries } from 'src/app/state/countries.selector';
 import { Country } from '../countires.model';
@@ -22,10 +22,12 @@ export class CountriesListComponent implements OnInit {
 
   constructor(private elementRef: ElementRef, private booksService: GoogleBooksService, private store: Store,) {
     this.countries = this.store.select(selectCountries);
+   
   }
 
   ngOnInit() {
     this.booksService.getCountries().subscribe((countries) => {
+      console.log(countries)
       this.store.dispatch(CountriessApiActions.countriesList({ countries }))
     })
   }
